@@ -43,6 +43,7 @@ namespace GC
             moveDirections = cameraObject.forward * inputHandler.vertical;
             moveDirections += cameraObject.right * inputHandler.horizontal;
             moveDirections.Normalize();
+            moveDirections.y = 0;
 
             float speed = movementSpeed;
             moveDirections *= speed;
