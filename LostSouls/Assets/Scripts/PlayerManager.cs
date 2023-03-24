@@ -19,6 +19,7 @@ namespace GC
         {
             InputHandler.isInteracting = anim.GetBool("isInteracting");
             InputHandler.rollFlag = false;
+            InputHandler.sprintFlag = false;
         }
     }
 

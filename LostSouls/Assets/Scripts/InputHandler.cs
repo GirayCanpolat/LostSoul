@@ -15,6 +15,8 @@ namespace GC
         public bool b_Input;
 
         public bool rollFlag;
+        public bool sprintFlag;
+        public float rollingInputTimer;
         public bool isInteracting;
 
         PlayerControls inputActions;
@@ -77,7 +79,18 @@ namespace GC
 
             if (b_Input)
             {
-                rollFlag = true;
+                rollingInputTimer += delta;
+                sprintFlag = true;
+            }
+            else
+            {
+                if(rollingInputTimer > 0 && rollingInputTimer < 0.5f)
+                {
+                    sprintFlag = false;
+                    rollFlag = true;
+                }
+
+                rollingInputTimer = 0;
             }
         }
     }
