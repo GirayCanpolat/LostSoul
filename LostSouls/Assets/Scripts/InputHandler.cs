@@ -13,7 +13,9 @@ namespace GC
         public float mouseY;
 
         public bool b_Input;
+
         public bool rollFlag;
+        public bool isInteracting;
 
         PlayerControls inputActions;
         CameraHandler cameraHandler;
@@ -71,7 +73,7 @@ namespace GC
 
         private void HandleRollInput(float delta)
         {
-            b_Input = inputActions.PlayerActions.Roll.phase == UnityEngine.InputSystem.InputActionPhase.Started;
+            b_Input = inputActions.PlayerActions.Roll.phase == UnityEngine.InputSystem.InputActionPhase.Performed;
 
             if (b_Input)
             {

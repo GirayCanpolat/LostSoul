@@ -106,10 +106,12 @@ namespace GC
                     moveDirections.y = 0;
                     Quaternion rollRotation = Quaternion.LookRotation(moveDirections);
                     myTransform.rotation = rollRotation;
+                    print("Roll");
                 }
                 else
                 {
                     animatorHandler.PlayTargetAnimation("Backstep", true);
+                    print("Back");
                 }
             }
         }

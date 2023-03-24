@@ -122,7 +122,7 @@
                 {
                     "name": "Roll",
                     "type": "Button",
-                    "id": "9339878f-3fc4-4c54-80d4-1ec3980db5d9",
+                    "id": "3cc4102f-238e-4b0b-9547-84cdf2939da4",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -132,7 +132,7 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "5fe9d5d1-6f7e-44b9-ba74-0e06646ebb81",
+                    "id": "dd21405d-305f-4596-ae02-a1c621deab73",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
@@ -143,7 +143,7 @@
                 },
                 {
                     "name": "",
-                    "id": "06dbd582-0a83-4cb3-83fa-d0e9ad50f0fe",
+                    "id": "450828e8-1a10-47ef-911b-8e270c9a8775",
                     "path": "<Keyboard>/leftShift",
                     "interactions": "",
                     "processors": "",
