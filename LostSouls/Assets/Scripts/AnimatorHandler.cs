@@ -7,6 +7,7 @@ namespace GC
     public class AnimatorHandler : MonoBehaviour
     {
         public Animator anim;
+        public PlayerManager playerManager;
         public InputHandler inputHandler;
         public PlayerLocomotion playerLocomotion;
         int vertical;
@@ -17,6 +18,7 @@ namespace GC
         {
             anim = GetComponent<Animator>();
             inputHandler = GetComponentInParent<InputHandler>();
+            playerManager = GetComponentInParent<PlayerManager>();
             playerLocomotion = GetComponentInParent<PlayerLocomotion>();
             vertical = Animator.StringToHash("Vertical");
             horizontal = Animator.StringToHash("Horizontal");
@@ -104,7 +106,7 @@ namespace GC
 
         private void OnAnimatorMove()
         {
-            if (inputHandler.isInteracting == false)
+            if (playerManager.isInteracting == false)
                 return;
 
             float delta = Time.deltaTime;

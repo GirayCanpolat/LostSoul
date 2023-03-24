@@ -38,15 +38,6 @@ namespace GC
             animatorHandler.Initialize();
         }
 
-        public void Update()
-        {
-            float delta = Time.deltaTime;
-
-            isSprinting = inputHandler.b_Input;
-            inputHandler.TickInput(delta);
-            HandleMovement(delta);
-            HandleRollingAndSprinting(delta);
-        }
         #region Movement
         Vector3 normalVector;
         Vector3 targetPosition;

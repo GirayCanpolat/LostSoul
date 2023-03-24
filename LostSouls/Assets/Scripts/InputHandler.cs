@@ -17,29 +17,11 @@ namespace GC
         public bool rollFlag;
         public bool sprintFlag;
         public float rollingInputTimer;
-        public bool isInteracting;
 
         PlayerControls inputActions;
-        CameraHandler cameraHandler;
 
         Vector2 movementInput;
         Vector2 cameraInput;
-
-        private void Awake()
-        {
-            cameraHandler = CameraHandler.signleton;
-        }
-
-        private void FixedUpdate()
-        {
-            float delta = Time.fixedDeltaTime;
-
-            if(cameraHandler != null)
-            {
-                cameraHandler.FollowTarget(delta);
-                cameraHandler.HandleCameraRotation(delta, mouseX, mouseY);
-            }
-        }
 
         public void OnEnable()
         {
