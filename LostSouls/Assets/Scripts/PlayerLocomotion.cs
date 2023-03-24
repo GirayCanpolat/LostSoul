@@ -75,7 +75,7 @@ namespace GC
             moveDirections.Normalize();
             moveDirections.y = 0;
 
-            float speed = movementSpeed;
+            float speed = movementSpeed * inputHandler.moveAmount;
             moveDirections *= speed;
 
             Vector3 projectedVelocity = Vector3.ProjectOnPlane(moveDirections, normalVector);
